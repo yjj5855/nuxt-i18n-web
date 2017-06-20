@@ -1,16 +1,16 @@
 {
   "links": {
-    "home": "Home",
-    "about": "About",
+    "home": "主页",
+    "about": "关于",
     "english": "English version",
     "french": "French version"
   },
   "home": {
-    "title": "Welcome",
+    "title": "欢迎",
     "introduction": "This is an introduction in English."
   },
   "about": {
-    "title": "About",
+    "title": "关于我们",
     "introduction": "This page is made to give you more informations."
   }
 }

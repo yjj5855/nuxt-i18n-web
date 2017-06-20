@@ -18,6 +18,7 @@
 
 </style>
 <script>
+  import {replaceRoute} from '~assets/util'
   export default {
     components: {},
     head () {
@@ -25,16 +26,20 @@
     },
     data () {
       return {
-        activeName: '/about'
+        activeName: ''
       }
     },
     methods: {
       handleTabClick (tab) {
-        if (this.$i18n.locale === 'zh') {
-          this.$router.replace(tab.name)
-        } else {
-          this.$router.replace(`/${this.$i18n.locale}${tab.name}`)
-        }
+        replaceRoute(this, tab.name)
+      }
+    },
+    created () {
+      if (this.$i18n.locale === 'zh') {
+        console.log(this.$route.fullPath)
+        this.activeName = this.$route.fullPath
+      } else {
+        this.activeName = this.$route.fullPath.replace(`/${this.$i18n.locale}`, '')
       }
     }
   }
