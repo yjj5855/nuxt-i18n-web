@@ -1,6 +1,6 @@
 <template>
-  <div class="navbar-wrapper" :class="theme">
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="navbar-wrapper">
+    <nav class="navbar navbar-default navbar-fixed-top" :class="navbarClass" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header page-scroll">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -21,7 +21,7 @@
             <li><nuxt-link tag="a" class="page-scroll" to="/">{{$t('links.link5')}}</nuxt-link></li>
             <li><nuxt-link tag="a" class="page-scroll" to="/">{{$t('links.link6')}}</nuxt-link></li>
             <li><nuxt-link tag="a" class="page-scroll" to="/">{{$t('links.link7')}}</nuxt-link></li>
-            <li class="navbar-btns hidden-sm">
+            <li class="navbar-btns hidden-sm hidden-xs">
               <button class="btn btn-ghost">{{$t('links.btn-login')}}</button>
               <button class="btn btn-solid">{{$t('links.btn-signin')}}</button>
             </li>
@@ -39,10 +39,21 @@
     data () {
       return {
         scrollTop: '',
+        navbarClass: '',
         theme: 'transparent' // transparent or white
       }
     },
     computed: {
+    },
+    methods: {
+      handleScroll (e) {
+        this.scrollTop = $(window).scrollTop()
+        if (this.scrollTop > 70) {
+          this.navbarClass = 'navbar-scroll'
+        } else {
+          this.navbarClass = ''
+        }
+      }
     },
     created () {
 
@@ -50,16 +61,8 @@
     mounted () {
       $(window).on('scroll', this.handleScroll)
     },
-    methods: {
-      handleScroll (e) {
-        this.scrollTop = $(window).scrollTop()
-        if (this.scrollTop > 70) {
-          this.theme = 'white'
-        } else {
-          this.theme = 'transparent'
-        }
-        console.log(this.scrollTop)
-      }
+    destroyed () {
+      $(window).off('scroll', this.handleScroll)
     }
   }
 </script>
@@ -73,7 +76,7 @@
     }
   }
   .navbar-btns{
-    margin-top: 15px;
+    margin-top: 20px;
     margin-left: 50px;
 
     .btn{
@@ -93,13 +96,7 @@
     background-color: @navy;
     border-color: @navy;
   }
-  .navbar-wrapper.white{
-    .navbar {
-      background-color: #fff;
-    }
-    .nav li a {
-      color: #676a6c;
-    }
+  .navbar.navbar-scroll{
     .nav li .btn-ghost{
       color: @navy;
       background-color: #fff;
