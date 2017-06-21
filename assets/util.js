@@ -7,3 +7,7 @@ export function replaceRoute (vm, path) {
     vm.$router.replace(`/${vm.$i18n.locale}${path}`)
   }
 }
+
+export function isMobile () {
+
+}

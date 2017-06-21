@@ -1,9 +1,15 @@
 {
   "links": {
-    "home": "主页",
-    "about": "关于",
-    "english": "English version",
-    "french": "French version"
+    "link1": "主页",
+    "link2": "班步平台",
+    "link3": "优选服务",
+    "link4": "班步学院",
+    "link5": "客户案例",
+    "link6": "咨询中心",
+    "link7": "关于我们",
+
+    "btn-login": "登录",
+    "btn-signin": "注册"
   },
   "home": {
     "title": "欢迎",

@@ -22,7 +22,9 @@
   export default {
     components: {},
     head () {
-      return {title: this.$t('about.title')}
+      return {
+        title: this.$t('about.title')
+      }
     },
     data () {
       return {
@@ -32,11 +34,11 @@
     methods: {
       handleTabClick (tab) {
         replaceRoute(this, tab.name)
+        this.activeName = tab.name
       }
     },
     created () {
       if (this.$i18n.locale === 'zh') {
-        console.log(this.$route.fullPath)
         this.activeName = this.$route.fullPath
       } else {
         this.activeName = this.$route.fullPath.replace(`/${this.$i18n.locale}`, '')
