@@ -1,16 +1,58 @@
 {
   "links": {
-    "home": "Home",
-    "about": "About",
-    "english": "English version",
-    "french": "French version"
+    "link1": "主页",
+    "link2": "班步平台",
+    "link3": "优选服务",
+    "link4": "班步学院",
+    "link5": "客户案例",
+    "link6": "咨询中心",
+    "link7": "关于我们",
+
+    "btn-login": "登录",
+    "btn-signin": "注册"
   },
   "home": {
-    "title": "Welcome",
+    "title": "欢迎",
     "introduction": "This is an introduction in English."
   },
   "about": {
-    "title": "About",
+    "title": "关于我们",
     "introduction": "This page is made to give you more informations."
+  },
+  "footer": {
+    "collapse1": {
+      "name": "班步平台",
+      "children": [
+        {"name": "了解班步"},
+        {"name": "体验班步"},
+        {"name": "免费试用"},
+        {"name": "隐私声明"}
+      ]
+    },
+    "collapse2": {
+      "name": "优选服务",
+      "children": [
+        {"name": "人事外包"},
+        {"name": "弹性福利"},
+        {"name": "咨询服务"},
+        {"name": "招聘服务"}
+      ]
+    },
+    "collapse3": {
+      "name": "班步学院",
+      "children": [
+        {"name": "课程介绍"},
+        {"name": "课程回顾"}
+      ]
+    },
+    "collapse4": {
+      "name": "关于我们",
+      "children": [
+        {"name": "公司简介"},
+        {"name": "团队介绍"},
+        {"name": "加入我们"},
+        {"name": "合作洽谈"}
+      ]
+    }
   }
 }
