@@ -17,6 +17,7 @@
 </template>
 
 <script>
+  // develop 修改的
   export default {
     head () {
       return {title: this.$t('home.title')}
