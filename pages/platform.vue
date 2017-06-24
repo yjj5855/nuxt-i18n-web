@@ -7,7 +7,7 @@
       <i class="el-icon-fa-address-book"></i>
       <i class="el-icon-iconfont-bianji"></i>
     </div>
-    <div>wefwegwegjwejg</div>
+    <div>dsjkfsjnsnnsvsdmvmsdgks</div>
     <el-tabs @tab-click="handleTabClick">
       <el-tab-pane label="WEB端" name=""></el-tab-pane>
       <el-tab-pane label="移动端" name="mobile"></el-tab-pane>
